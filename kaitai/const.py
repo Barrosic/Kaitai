@@ -1,9 +1,12 @@
+import sys
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 def asset_path(*parts):
-    return os.path.join(BASE_DIR, "assets", *parts)
+    if getattr(sys, 'frozen', False):
+        base = os.path.dirname(sys.executable)
+    else:
+        base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base, "assets", *parts)
 
 # COLORS
 COLOR_BLACK = (0, 0, 0)
