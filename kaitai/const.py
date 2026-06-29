@@ -1,0 +1,54 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def asset_path(*parts):
+    return os.path.join(BASE_DIR, "assets", *parts)
+
+# COLORS
+COLOR_BLACK = (0, 0, 0)
+COLOR_CIAN_BLUE = (0, 200, 255)
+COLOR_GREEN = (0, 220, 100)
+COLOR_RED = (220, 50, 50)
+COLOR_WHITE = (255, 255, 255)
+COLOR_YELLOW = (255, 255, 0)
+
+# BULLETS
+BULLET_WIDTH = 10
+BULLET_HEIGHT = 15
+BULLET_SPEED = 8
+BULLET_COLOR = COLOR_YELLOW
+
+# ENEMY
+ENEMY_WIDTH = 55
+ENEMY_HEIGHT = 45
+ENEMY_SPEED = 3
+ENEMY_COLOR = COLOR_RED
+ENEMY_INTERVAL = 1500 # milissegundos entre cada spawn
+
+# GAME STATES
+STATE_MENU = "menu"
+STATE_PLAYING = "playing"
+STATE_GAMEOVER = "gameover"
+STATE_VICTORY = "victory"
+
+# GAME OVER CONDITIONS
+SCORE_TO_WIN = 20
+
+# HUD
+PLAYER_LIVES = 3
+FONT_SIZE = 28
+HUD_COLOR = COLOR_WHITE
+
+# PLAYER
+PLAYER_WIDTH = 50
+PLAYER_HEIGHT = 80
+PLAYER_SPEED = 5
+PLAYER_COLOR = COLOR_CIAN_BLUE
+
+# WINDOW
+FPS = 60
+TITLE = "Kaitai"
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 600
+
